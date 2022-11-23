@@ -1,0 +1,10 @@
+dependencies {
+	api project(':project1')
+	api project(':project3')
+
+	testFixturesApi project(':project2')
+	testFixturesApi project(':project1')
+
+	testImplementation testFixtures(project(":project3"))
+	testImplementation testFixtures(project(":project1"))
+}
